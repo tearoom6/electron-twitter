@@ -1,19 +1,38 @@
 {
   "name": "electron-twitter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Sample app by Electron",
+  "main": "app/main.js",
+  "author": "Tomohiro Murota <tomohiro.murota@gmail.com>",
+  "homepage": "https://github.com/tearoom6/electron-twitter",
+  "keywords": [],
+  "license": "ISC",
   "scripts": {
     "build": "webpack",
     "watch": "webpack -d -w",
     "start": "electron app/main.js",
     "start:debug": "electron --debug=5858 app/main.js",
     "start:inspector": "ELECTRON_RUN_AS_NODE=true node_modules/node-inspector/bin/inspector.js",
-    "test": "mocha"
+    "test": "mocha",
+    "pack:mac": "build --mac"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "build": {
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 220,
+          "type": "file"
+        }
+      ]
+    }
+  },
   "dependencies": {
     "photon": "git+https://github.com/connors/photon.git",
     "react": "^15.5.3",
@@ -29,6 +48,7 @@
     "css-loader": "^0.28.0",
     "devtron": "^1.4.0",
     "electron": "^1.6.2",
+    "electron-builder": "^16.8.0",
     "electron-rebuild": "^1.5.7",
     "eslint": "^3.19.0",
     "eslint-loader": "^1.7.1",
