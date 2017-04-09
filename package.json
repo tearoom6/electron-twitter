@@ -14,7 +14,9 @@
     "start:debug": "electron --debug=5858 app/main.js",
     "start:inspector": "ELECTRON_RUN_AS_NODE=true node_modules/node-inspector/bin/inspector.js",
     "test": "mocha",
-    "pack:mac": "build --mac"
+    "pack:mac": "build --mac",
+    "pack:linux": "build --linux",
+    "pack:win": "build --win --x64"
   },
   "build": {
     "dmg": {
@@ -31,6 +33,9 @@
           "type": "file"
         }
       ]
+    },
+    "squirrelWindows": {
+      "iconUrl": "https://raw.githubusercontent.com/tearoom6/electron-twitter/master/build/icon.ico"
     }
   },
   "dependencies": {
