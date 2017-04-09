@@ -47,8 +47,8 @@ const rendererConfig = {
     __dirname: false,
     __filename: false
   },
-  entry: { renderer: __dirname + '/src/js/renderer/index.js' },
-  output: { path: __dirname + '/app', filename: '[name].js' },
+  entry: { timeline: __dirname + '/src/js/renderer/timeline.js', form: __dirname + '/src/js/renderer/form.js' },
+  output: { path: __dirname + '/app', filename: 'renderer_[name].js' },
   module: {
     rules: [
       {
