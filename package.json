@@ -8,7 +8,8 @@
     "watch": "webpack -d -w",
     "start": "electron app/main.js",
     "start:debug": "electron --debug=5858 app/main.js",
-    "start:inspector": "ELECTRON_RUN_AS_NODE=true node_modules/node-inspector/bin/inspector.js"
+    "start:inspector": "ELECTRON_RUN_AS_NODE=true node_modules/node-inspector/bin/inspector.js",
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
@@ -33,9 +34,11 @@
     "eslint-loader": "^1.7.1",
     "eslint-plugin-react": "^6.10.3",
     "file-loader": "^0.11.1",
+    "mocha": "^3.2.0",
     "node-gyp": "^3.6.0",
     "node-inspector": "^1.0.0",
     "node-pre-gyp": "^0.6.34",
+    "spectron": "^3.6.1",
     "style-loader": "^0.16.1",
     "url-loader": "^0.5.8",
     "webpack": "^2.3.3"
